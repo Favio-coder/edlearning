@@ -23,11 +23,13 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    display: flex;             /* Usar flexbox para alineación */
+    flex-direction: column;    /* Alinear elementos en columna */
+    justify-content: center;    /* Centrar verticalmente */
+    align-items: flex-start;    /* Alinear horizontalmente a la izquierda */
+    height: 100vh;            /* Altura completa de la ventana */             /* Sin márgenes */
+    padding: 0;               /* Sin padding */
+
 }
 
 h1 {

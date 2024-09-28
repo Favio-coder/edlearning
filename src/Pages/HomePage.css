@@ -1,4 +1,4 @@
-
+/* Aplicar fondo al cuerpo de la página */
 body {
     margin: 0;
     padding: 0;
@@ -8,11 +8,90 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-html, body {
-    /*width: 50%;*/
-    overflow-x: hidden; /* Evitar scroll horizontal */
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
+/* Navbar */
 .navbar {
-    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho */
+    padding: 0;
+    margin: 0;
+}
+
+/* Container */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Branding */
+.navbar-brand {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.navbar-brand p {
+    margin: 0;
+    font-family: 'Hakuna Sans';
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.brand-name-light {
+    color: #00A2B6;
+}
+
+.brand-name-dark {
+    color: black;
+}
+
+/* Buttons */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+/* Main section */
+.main-section {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.main-title {
+    color: black;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'Hakuna Sans';
+}
+
+.main-title-blue {
+    color: #005A66;
+}
+
+/* Text Main */
+.text-main {
+    background: #D9D9D9;
+    padding: 20px;
+    margin-left: 30px;
+    max-width: 600px;
+}
+
+.join-button {
+    margin-left: 30px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
 }

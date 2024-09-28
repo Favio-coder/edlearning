@@ -1,29 +1,17 @@
+// Button.tsx
+import React from "react";
+import "./Button.css"; // Asegúrate de importar el archivo CSS
 
 interface Props {
-    body: string
-    color: string
-    backgroundColor: string
+    body: string;
 }
 
-function Button(props: Props) {
-
-    const { body, color, backgroundColor } = props
-
+const Button: React.FC<Props> = ({ body }) => {
     return (
-        <button
-            type="button"
-            className="btn btn-primary btn-lg"
-            style={{
-                margin: '10px 2px', 
-                background: backgroundColor,
-                borderColor: backgroundColor,
-                borderWidth: '1px',
-                color: color
-            }}
-        >
+        <button type="button" className="btn-custom">
             {body}
         </button>
-    )
-}
+    );
+};
 
 export default Button;
