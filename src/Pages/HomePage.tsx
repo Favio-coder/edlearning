@@ -1,82 +1,85 @@
-import React from "react";
 import Button from "../components/Button";
 import "./HomePage.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 function HomePage() {
     return (
         <div>
-            {/* Header de la página */}
+
             <header style={{ position: "fixed", top: 0, left: 0, width: "100%", zIndex: 1000 }}>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ padding: 0, margin: 0 }}>
-                    <div className="container-fluid" style={{ paddingLeft: 0, paddingRight: 0 }}>
-                        <a className="navbar-brand" href="#" style={{ marginLeft: "30px", textAlign: "left" }}>
-                            <p
-                                style={{
-                                    marginBottom: 0,
-                                    color: "#00A2B6",
-                                    fontWeight: "bold",
-                                    textAlign: "left",
-                                    margin: 0 // Eliminar márgenes por defecto
-                                }}
-                            >
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <div className="container-fluid">
+                        <a className="navbar-brand" href="#" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+
+                            <p className="mb-0" style={{ color: "#00A2B6", fontWeight: "bold" }}>
                                 Smart
                             </p>
-                            <p
-                                style={{
-                                    marginTop: 0,
-                                    color: "black",
-                                    fontWeight: "bold",
-                                    textAlign: "left",
-                                    margin: 0 // Eliminar márgenes por defecto
-                                }}
-                            >
+                            <p className="mb-0" style={{ color: "black", fontWeight: "bold" }}>
                                 Finanzas
                             </p>
                         </a>
-                        <div style={{ display: "flex", gap: "10px", marginRight: "30px" }}>
-                            <Button body="Iniciar sesión" backgroundColor="#A8A8A8" color="white" />
-                            <Button body="Registrate" backgroundColor="#00A2B6" color="white" />
+                        <button
+                            className="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarResponsive"
+                            aria-controls="navbarResponsive"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarResponsive">
+                            <div className="ms-auto d-flex gap-2">
+                                <Button body="Iniciar sesión" backgroundColor="#A8A8A8" color="white" />
+                                <Button body="Registrate" backgroundColor="#00A2B6" color="white" />
+                            </div>
                         </div>
                     </div>
                 </nav>
             </header>
 
-            <main style={{ textAlign: "left", marginLeft: "4px" }}> {/* Ajuste aquí */}
-                <div>
-                    <div className="title-main" style={{ marginLeft: "1px" }}>
-                        <h1
-                            style={{
-                                color: "black",
-                                fontWeight: "bold",
-                                fontSize: "60px",
-                                marginBottom: "0px"
-                            }}
-                        >
-                            HECHO PARA ESTUDIANTES
-                        </h1>
-                        <h1 
-                            style={{
-                                color: "#005A66",
-                                fontWeight: "bold",
-                                fontSize: "60px",
-                                marginTop: "0px"
-                            }}
-                        >
-                            FINANCIEROS
+
+            <main className="container" style={{ marginTop: "80px" }}>
+                {/* Añadimos margen superior para el header fijo */}
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <h1 className="display-4 font-weight-bold mb-0" style={{ color: "white" }}>
+                            FINANZAS INTELIGENTES PARA ESTUDIANTES
                         </h1>
                     </div>
-                    <div style={{ marginTop: "50px" }}></div>
-                    <div className="text-main" style={{ background: "#D9D9D9", padding: "0px" }}>
-                        <p style={{ fontWeight: "500" }}>
-                            Es una plataforma educativa diseñada <br />
-                            para jóvenes que desean tomar control <br />
-                            de su futuro financiero de manera <br />
-                            inteligente y accesible.
-                        </p>
+                </div>
+
+                <div className="row mt-5">
+                    <div className="col-12 text-center">
+                        {/* Ajustamos el contenedor para tener bordes redondeados */}
+                        <div
+                            className="bg-light py-4 px-3"
+                            style={{
+                                backgroundColor: "#D9D9D9",
+                                borderRadius: "15px", // Bordes redondeados moderados
+                                display: "inline-block", // Para que el contenedor se ajuste al tamaño del texto
+                                padding: "20px", // Ajuste del padding interno
+                            }}
+                        >
+                            <p className="font-weight-medium mb-0">
+                                Es una plataforma educativa diseñada <br />
+                                para jóvenes que desean tomar control <br />
+                                de su futuro financiero de manera <br />
+                                inteligente y accesible.
+                            </p>
+                        </div>
                     </div>
-                    <Button body="ÚNETE AQUI" backgroundColor="#007180" color="white" />
+                </div>
+
+                <div className="row mt-4">
+                    <div className="col-12 text-center">
+                        <Button body="ÚNETE AQUÍ" backgroundColor="#007180" color="white" />
+                    </div>
                 </div>
             </main>
+
         </div>
     );
 }
