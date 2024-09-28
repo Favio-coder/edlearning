@@ -1,0 +1,18 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./src/assets/images/fondoMain.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+html, body {
+    /*width: 50%;*/
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+.navbar {
+    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho */
+}
