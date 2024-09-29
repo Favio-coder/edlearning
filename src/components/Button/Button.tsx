@@ -1,15 +1,19 @@
-import './Button.css'; // Importa el archivo CSS
+import { Link } from "react-router-dom"
+import "../Button.css"
 
 interface Props {
-    body: string;
-    color: string; // Color del texto dinámico
-    backgroundColor: string; // Color de fondo dinámico
+    body: string
+    color: string
+    backgroundColor: string
+    to: string
 }
 
 function Button(props: Props) {
-    const { body, color, backgroundColor } = props;
+
+    const { body, color, backgroundColor, to } = props
 
     return (
+        <Link to={to} style={{textDecoration: 'none'}}>
         <button
             type="button"
             className="btn-custom"
@@ -20,7 +24,9 @@ function Button(props: Props) {
         >
             {body}
         </button>
-    );
+        </Link>
+        
+    )
 }
 
 export default Button;
