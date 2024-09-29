@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import "../Button.css"
 
 interface Props {
     body: string
@@ -15,13 +16,10 @@ function Button(props: Props) {
         <Link to={to} style={{textDecoration: 'none'}}>
         <button
             type="button"
-            className="btn btn-primary btn-lg"
+            className="btn-custom"
             style={{
-                margin: '10px 2px', 
-                background: backgroundColor,
-                borderColor: backgroundColor,
-                borderWidth: '1px',
-                color: color
+                color: color, // Color del texto dinámico
+                backgroundColor: backgroundColor, // Color de fondo dinámico
             }}
         >
             {body}

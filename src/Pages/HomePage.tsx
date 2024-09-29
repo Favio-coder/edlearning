@@ -1,7 +1,7 @@
 import Button from "../components/Button/Button";
 import "./HomePage.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function HomePage() {
     return (
@@ -9,13 +9,12 @@ function HomePage() {
 
             <header style={{ position: "fixed", top: 0, left: 0, width: "100%", zIndex: 1000 }}>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <div className="container-fluid" style={{marginLeft:"10px"}}>
-                        <a className="navbar-brand" href="#" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-
-                            <p className="mb-0" style={{ color: "#00A2B6", fontWeight: "bold" }}>
+                    <div className="container-fluid">
+                        <a className="navbar-brand" href="#" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", marginLeft: "30px" }}>
+                            <p className="mb-0" style={{ color: "#00A2B6", fontWeight: "'Hakuna Sans', sans-serif" }}>
                                 Smart
                             </p>
-                            <p className="mb-0" style={{ color: "black", fontWeight: "bold" }}>
+                            <p className="mb-0" style={{ color: "black", fontWeight: "'Hakuna Sans', sans-serif" }}>
                                 Finanzas
                             </p>
                         </a>
@@ -34,14 +33,14 @@ function HomePage() {
                             <div className="ms-auto d-flex gap-2">
                                 <Button
                                     body="Iniciar sesión"
-                                    backgroundColor="#A8A8A8" 
-                                    color="white" 
+                                    backgroundColor="#" 
+                                    color="" 
                                     to="/login"
                                 />
                                 <Button 
-                                    body="Registrate" 
-                                    backgroundColor="#00A2B6" 
-                                    color="white" 
+                                    body="Regístrate" 
+                                    backgroundColor="#" 
+                                    color="" 
                                     to="/register"
                                 />
                             </div>
@@ -50,29 +49,42 @@ function HomePage() {
                 </nav>
             </header>
 
-
-            <main className="container" style={{ marginTop: "80px" }}>
-                {/* Añadimos margen superior para el header fijo */}
+            <main className="container" style={{ paddingLeft: "1em" }}>
                 <div className="row">
-                    <div className="col-12 text-center">
-                        <h1 className="display-4 font-weight-bold mb-0" style={{ color: "white" }}>
-                            FINANZAS INTELIGENTES PARA ESTUDIANTES
+                    <div className="col-12 text-left">
+                        <h1 className="font-weight-bold" style={{ 
+                            color: "white", 
+                            fontFamily: "'Hakuna Sans', sans-serif", 
+                            WebkitTextStroke: "1.4px #01A1B7" 
+                        }}>
+                            FINANZAS
+                        </h1>
+                        <h1 className="font-weight-bold" style={{ 
+                            color: "white", 
+                            fontFamily: "'Hakuna Sans', sans-serif", 
+                            WebkitTextStroke: "1.4px #01A1B7"
+                        }}>
+                            INTELIGENTES PARA
+                        </h1>
+                        <h1 className="font-weight-bold mb-0" style={{ 
+                            color: "white", 
+                            fontFamily: "'Hakuna Sans', sans-serif", 
+                            WebkitTextStroke: "1.4px #01A1B7" 
+                        }}>
+                            ESTUDIANTES
                         </h1>
                     </div>
                 </div>
-
+                
                 <div className="row mt-5">
-                    <div className="col-12 text-center">
-                        {/* Ajustamos el contenedor para tener bordes redondeados */}
-                        <div
-                            className="bg-light py-4 px-3"
-                            style={{
-                                backgroundColor: "#D9D9D9",
-                                borderRadius: "15px", // Bordes redondeados moderados
-                                display: "inline-block", // Para que el contenedor se ajuste al tamaño del texto
-                                padding: "20px", // Ajuste del padding interno
-                            }}
-                        >
+                    <div className="col-12 text-left">
+                        <div className="bg-light py-4 px-3" style={{
+                            backgroundColor: "rgba(236, 236, 236, 0.9)", 
+                            borderRadius: "15px", 
+                            display: "inline-block", 
+                            padding: "10px 15px", 
+                            border: "1px solid #ECECEC",
+                        }}>
                             <p className="font-weight-medium mb-0">
                                 Es una plataforma educativa diseñada <br />
                                 para jóvenes que desean tomar control <br />
@@ -84,9 +96,13 @@ function HomePage() {
                 </div>
 
                 <div className="row mt-4">
-                    <div className="col-12 text-center">
-                        <Button to="/register" body="ÚNETE AQUÍ" backgroundColor="#007180" color="white" />
+                    <div className="col-12 text-left">
+                        <Button to="/register" body="ÚNETE AQUÍ" backgroundColor="#" color="" />
                     </div>
+                </div>
+
+                <div style={{ position: "absolute", right: "4em", top: "12em" }}>
+                    <img src="src/assets/images/imagen.png" alt="imagen" style={{ width: "540px", height: "auto" }} />
                 </div>
             </main>
 
