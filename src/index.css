@@ -14,7 +14,7 @@
 }
 
 a {
-  font-weight: 500;
+  font-weight: 700;
   color: #646cff;
   text-decoration: inherit;
 }
@@ -33,24 +33,32 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 5em;
+  line-height: 1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.custom-button {
+  font-family: 'Louis George Cafe', sans-serif; /* Fuente Louis George Cafe */
+  font-size: 1.2em; /* Tamaño de la fuente */
+  color: white; /* Color de la letra */
+  background-color: #006A77; /* Color de fondo inicial */
+  border: 2px solid #006A77; /* Borde gris claro de 10px */
+  padding: 0.4em 0.8em; /* Ajuste de padding para reducir el espacio */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s; /* Transición suave */
+  display: inline-block; /* Hace que el botón se ajuste al contenido */
+  text-align: center; /* Alineación del texto a la izquierda */
 }
-button:hover {
-  border-color: #646cff;
+
+.custom-button:hover {
+  background-color: #001B1F; /* Fondo verde oscuro al hacer hover */
+  border-color: #001B1F; /* Borde verde oscuro al hacer hover */
+  color: white; /* Asegura que el texto siga siendo blanco */
 }
+
+
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -67,4 +75,10 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.font-weight-medium {
+  font-family: 'Louis George Cafe', sans-serif;
+  font-size: 1.2em; /* Tamaño de fuente en píxeles */
+  text-transform: none;
+  margin-bottom: 0;
 }

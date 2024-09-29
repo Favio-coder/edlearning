@@ -1,97 +1,15 @@
-/* Aplicar fondo al cuerpo de la página */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('./src/assets/images/fondoMain.jpg'); /* Ruta a la imagen de fondo */
+    background-image: url('./src/assets/images/fondoMain.png'); /* Ruta a la imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
-
-/* Header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+html, body {
+    overflow-y: hidden;
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
-
-/* Navbar */
 .navbar {
-    padding: 0;
-    margin: 0;
-}
-
-/* Container */
-.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-/* Branding */
-.navbar-brand {
-    margin-left: 30px;
-    text-align: left;
-}
-
-.navbar-brand p {
-    margin: 0;
-    font-family: 'Hakuna Sans';
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.brand-name-light {
-    color: #00A2B6;
-}
-
-.brand-name-dark {
-    color: black;
-}
-
-/* Buttons */
-.button-container {
-    display: flex;
-    gap: 10px;
-    margin-right: 30px;
-}
-
-/* Main section */
-.main-section {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-}
-
-.main-title {
-    color: black;
-    font-weight: bold;
-    font-size: 60px;
-    font-family: 'Hakuna Sans';
-}
-
-.main-title-blue {
-    color: #005A66;
-}
-
-/* Text Main */
-.text-main {
-    background: #D9D9D9;
-    padding: 20px;
-    margin-left: 30px;
-    max-width: 600px;
-}
-
-.join-button {
-    margin-left: 30px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
+    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho */
 }
