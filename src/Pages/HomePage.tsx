@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import "./HomePage.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
@@ -9,7 +9,7 @@ function HomePage() {
 
             <header style={{ position: "fixed", top: 0, left: 0, width: "100%", zIndex: 1000 }}>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <div className="container-fluid">
+                    <div className="container-fluid" style={{marginLeft:"10px"}}>
                         <a className="navbar-brand" href="#" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
 
                             <p className="mb-0" style={{ color: "#00A2B6", fontWeight: "bold" }}>
@@ -32,8 +32,18 @@ function HomePage() {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                             <div className="ms-auto d-flex gap-2">
-                                <Button body="Iniciar sesión" backgroundColor="#A8A8A8" color="white" />
-                                <Button body="Registrate" backgroundColor="#00A2B6" color="white" />
+                                <Button
+                                    body="Iniciar sesión"
+                                    backgroundColor="#A8A8A8" 
+                                    color="white" 
+                                    to="/login"
+                                />
+                                <Button 
+                                    body="Registrate" 
+                                    backgroundColor="#00A2B6" 
+                                    color="white" 
+                                    to="/register"
+                                />
                             </div>
                         </div>
                     </div>
@@ -75,7 +85,7 @@ function HomePage() {
 
                 <div className="row mt-4">
                     <div className="col-12 text-center">
-                        <Button body="ÚNETE AQUÍ" backgroundColor="#007180" color="white" />
+                        <Button to="/register" body="ÚNETE AQUÍ" backgroundColor="#007180" color="white" />
                     </div>
                 </div>
             </main>

@@ -1,15 +1,18 @@
+import { Link } from "react-router-dom"
 
 interface Props {
     body: string
     color: string
     backgroundColor: string
+    to: string
 }
 
 function Button(props: Props) {
 
-    const { body, color, backgroundColor } = props
+    const { body, color, backgroundColor, to } = props
 
     return (
+        <Link to={to} style={{textDecoration: 'none'}}>
         <button
             type="button"
             className="btn btn-primary btn-lg"
@@ -23,6 +26,8 @@ function Button(props: Props) {
         >
             {body}
         </button>
+        </Link>
+        
     )
 }
 

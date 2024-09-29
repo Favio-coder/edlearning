@@ -1,0 +1,24 @@
+/* MainPage.css */
+
+/* Menú lateral */
+.sidebar {
+    width: 250px; /* Ancho de la barra lateral */
+    background-color: #F2F2F2; /* Color de fondo de la barra lateral */
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed; /* Mantener la barra lateral fija */
+    top: 56px; /* Justo debajo de la navbar */
+    left: 0; /* Pegado al margen izquierdo */
+    overflow-y: auto; /* Permitir desplazamiento si hay mucho contenido */
+    border-right: 2px solid black; /* Opcional: un borde derecho para separación */
+}
+
+/* Sección central */
+.content {
+    margin-left: 250px; /* Espacio para la barra lateral */
+    padding-top: 20px; /* Espacio adicional en la parte superior */
+    background-color: #ffffff; /* Color de fondo de la sección central */
+    overflow-y: auto; /* Permitir desplazamiento si hay mucho contenido */
+}
+
+
+

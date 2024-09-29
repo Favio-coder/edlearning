@@ -11,7 +11,7 @@ body {
 html, body {
     /*width: 50%;*/
     overflow-x: hidden; /* Evitar scroll horizontal */
-    
+    overflow-y: hidden;
 }
 
 .navbar {
