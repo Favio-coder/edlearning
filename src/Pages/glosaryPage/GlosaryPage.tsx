@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
 //Definiendo la estructura del Grafo
@@ -15,6 +15,7 @@ function buildGraph(glosaryData: GlosaryData) : Graph{
                 neighbors: []
             })
         }
+        console.log(letter)
     }
 
     return graph;
@@ -26,8 +27,10 @@ function connectNodes(graph: Graph) : void{
             if(word1 !== word2 && data1.meaning.includes(word2)){
                 graph.get(word1)!.neighbors.push(word2)
             }
+            console.log(data2)
         }
     }
+    
 }
 
 
@@ -249,6 +252,8 @@ function findRelatedWords(graph: Graph, startWord: string, depth: number = 1): s
     return result;
 }
 
+
+
 function GlosaryPage() {
     const [selectedLetter, setSelectedLetter] = useState<keyof GlosaryData>("A");
     const [searchQuery, setSearchQuery] = useState<string>(""); // Para rastrear la búsqueda del usuario
@@ -259,6 +264,10 @@ function GlosaryPage() {
         setSearchQuery(""); // Limpiar el buscador al cambiar de letra
         setSearchResults([]);
     };
+
+    useEffect(() => {
+        console.log("Palabras relacionadas:", findRelatedWords(graph, "Activo", 2));
+    }, []);
 
     const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
         let query = event.target.value.trim();

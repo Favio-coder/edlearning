@@ -1,11 +1,11 @@
 #root {
-  max-width: 1280px;
+  
   margin: 4;
   padding-top: 6em;      /* Padding superior */
   padding-right: 2em;    /* Padding derecho */
   padding-bottom: 1.5em; /* Padding inferior */
   padding-left: 4em;    
-  text-align: left;
+  
 }
 
 .logo {
