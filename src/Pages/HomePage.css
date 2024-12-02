@@ -1,6 +1,5 @@
 body {
-    margin: 0;
-    padding: 0;
+    
     background-image: url('./src/assets/images/fondoMain.png'); /* Ruta a la imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen en el fondo */
@@ -9,7 +8,6 @@ body {
 html, body {
     overflow-y: hidden;
     overflow-x: hidden; /* Evitar scroll horizontal */
+    
 }
-.navbar {
-    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho */
-}
+

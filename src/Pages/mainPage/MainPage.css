@@ -20,5 +20,9 @@
     overflow-y: auto; /* Permitir desplazamiento si hay mucho contenido */
 }
 
+.item:hover{
+    background-color: #61dafbaa;
+}
+
 
 
